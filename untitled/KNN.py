@@ -1,1 +1,1 @@
-print("wqe")
+import numpy as np
