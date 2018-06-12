@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 # Only needed if you want to display your plots inline if using Notebook
 # change inline to auto if you have Spyder installed
-%matplotlib inline
+#%matplotlib inline
 # import some data to play with
 iris = datasets.load_iris()
 print(iris.data)
