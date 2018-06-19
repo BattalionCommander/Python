@@ -8,8 +8,7 @@ from matplotlib.colors import ListedColormap
 from sklearn import neighbors, datasets
 
 
-#分类距离
-n_neighbors = 15
+
 
 # import some data to play with
 # 导入一些数据
@@ -29,6 +28,9 @@ y = iris.target
 # 网格中的步长
 h = .02
 
+#分类距离
+n_neighbors = 15
+
 # Create color maps #创建彩色地图
 cmap_light = ListedColormap(['#FFAAAA', '#AAFFAA', '#AAAAFF'])
 cmap_bold = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
@@ -37,7 +39,7 @@ cmap_bold = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
 for weights in ['uniform', 'distance']:
 
     # we create an instance of Neighbours Classifier and fit the data.
-    #我们创建一个邻居分类模型并结合数据。
+    #我们创建一个临近分类模型并结合数据。
     clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
     clf.fit(X, y)
 
