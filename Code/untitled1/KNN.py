@@ -31,7 +31,7 @@ h = .02
 #分类距离
 n_neighbors = 15
 
-# Create color maps #创建彩色地图
+#创建彩色地图,cmap_light用作背景的颜色，cmap_bold用作点的颜色
 cmap_light = ListedColormap(['#FFAAAA', '#AAFFAA', '#AAAAFF'])
 cmap_bold = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
 
@@ -68,7 +68,7 @@ for weights in ['uniform', 'distance']:
 
     # Plot also the training points
     #画出训练点,https://blog.csdn.net/qiu931110/article/details/68130199
-    plt.scatter(X[:, 0], X[:, 1], c=y, marker='v',cmap=cmap_bold,edgecolor='k', s=20)
+    plt.scatter(X[:, 0], X[:, 1], c=y, marker='o',cmap=cmap_bold,edgecolor='k', s=20)
 
     #设置坐标轴的最大最小区间
     plt.xlim(xx.min(), xx.max())
