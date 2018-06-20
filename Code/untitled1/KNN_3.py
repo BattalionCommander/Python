@@ -29,9 +29,9 @@ y = iris.target
 
 
 #分类距离
-n_neighbors = 15
+k = 15
 # 创建一个临近分类模型，需要设置分类距离和分类方式
-clf = neighbors.KNeighborsClassifier(n_neighbors, 'distance')
+clf = neighbors.KNeighborsClassifier(k, 'distance')
 #导入数据进行分析
 clf.fit(X, y)
 
@@ -52,7 +52,7 @@ xx, yy = np.meshgrid(np.arange(x_min, x_max, h),np.arange(y_min, y_max, h))
 Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
 # 将结果放入颜色图中，shape形状，reshape改造
 Z = Z.reshape(xx.shape)
-# 画图，虽然从结果上看没作用
+# 创建画板
 plt.figure()
 # 绘制背景颜色
 plt.pcolormesh(xx, yy, Z, cmap=cmap_light)

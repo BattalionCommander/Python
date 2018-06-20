@@ -29,7 +29,7 @@ y = iris.target
 h = .02
 
 #分类距离
-n_neighbors = 15
+k = 15
 
 #创建彩色地图,cmap_light用作背景的颜色，cmap_bold用作点的颜色
 cmap_light = ListedColormap(['#FFAAAA', '#AAFFAA', '#AAAAFF'])
@@ -40,7 +40,7 @@ for weights in ['uniform', 'distance']:
 
     # we create an instance of Neighbours Classifier and fit the data.
     #我们创建一个临近分类模型并结合数据。
-    clf = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
+    clf = neighbors.KNeighborsClassifier(k, weights=weights)
     clf.fit(X, y)
 
     # Plot the decision boundary. For that, we will assign a color to each
@@ -75,5 +75,5 @@ for weights in ['uniform', 'distance']:
     plt.ylim(yy.min(), yy.max())
     #plt.xlabel(u'321')
     #plt.ylabel(u'123')
-    plt.title("3-Class classification (k = %i, weights = '%s')"% (n_neighbors, weights))
+    plt.title("3-Class classification (k = %i, weights = '%s')"% (k, weights))
     plt.show()

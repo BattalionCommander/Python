@@ -26,9 +26,9 @@ y = iris.target
 
 
 #分类距离
-n_neighbors = 15
+k = 15
 # 创建一个临近分类模型，需要设置分类距离和分类方式
-clf = neighbors.KNeighborsClassifier(n_neighbors, 'uniform')
+clf = neighbors.KNeighborsClassifier(k, 'uniform')
 #导入数据进行分析
 clf.fit(X, y)
 
