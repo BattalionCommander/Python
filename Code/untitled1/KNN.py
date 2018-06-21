@@ -68,7 +68,7 @@ for weights in ['uniform', 'distance']:
 
     # Plot also the training points
     #画出训练点,https://blog.csdn.net/qiu931110/article/details/68130199
-    plt.scatter(X[:, 0], X[:, 1], c=y, marker='o',cmap=cmap_bold,edgecolor='k', s=20)
+    plt.scatter(X[:, 0], X[:, 1], c=y, marker='o',cmap=cmap_bold,edgecolor='k', s=40)
 
     #设置坐标轴的最大最小区间
     plt.xlim(xx.min(), xx.max())

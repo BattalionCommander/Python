@@ -12,7 +12,7 @@ c = np.arange(1, 10, 2)
 
 
 # meshgrid()创建坐标矩阵，需要为其传递两个一维数字数组
-xx, yy = np.meshgrid(np.arange(0,10, 0.2), np.arange(0, 10,2.5))
+xx, yy = np.meshgrid(np.arange(0,10, 1), np.arange(0, 10,1))
 
 
 # 设置坐标轴的取值范围
@@ -20,8 +20,8 @@ plt.xlim(xx.min(), yy.max())
 plt.ylim(yy.min(), yy.max())
 
 # 设置坐标轴的标识
-plt.xlabel(u'X')
-plt.ylabel(u'Y')
+plt.xlabel(u'Sepal_Length')
+plt.ylabel(u'Sepal_Width')
 
 #生成图片展示
 plt.show()
