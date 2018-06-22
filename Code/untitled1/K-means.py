@@ -13,7 +13,7 @@ print(iris.target)
 print(iris.target_names)
 
 
-#将数据存储到Pandas库中的DataFrame容器 二维，Series容器，最常用
+#将数据存储到Pandas库中的DataFrame二维容器，并重新命名
 x = pd.DataFrame(iris.data)
 x.columns = ['Sepal_Length', 'Sepal_Width', 'Petal_Length', 'Petal_Width']
 y = pd.DataFrame(iris.target)
