@@ -22,7 +22,7 @@ xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
 #weights 平均权重，uniform一般平均，  distance与距离成反比
 for weights in ['uniform', 'distance']:
     # 创建一个KNN分类器
-    k = 15
+    k = 5
     clf = neighbors.KNeighborsClassifier(n_neighbors=k, weights=weights)
     #用训练数据拟合分类器
     clf.fit(X, y)

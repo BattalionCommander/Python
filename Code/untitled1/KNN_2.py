@@ -38,8 +38,8 @@ plt.xlim(xx.min(), xx.max())
 plt.ylim(yy.min(), yy.max())
 
 # 设置坐标轴的标识
-plt.xlabel(u'Sepal_Length')
-plt.ylabel(u'Sepal_Width')
+#plt.xlabel(u'Sepal_Length')
+#plt.ylabel(u'Sepal_Width')
 
 #生成图片展示
 plt.show()

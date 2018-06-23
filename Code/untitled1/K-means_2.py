@@ -29,7 +29,7 @@ plt.figure(figsize=(14,7))
 
 # 创建一个颜色集合
 colormap = np.array(['red', 'lime', 'black'])
-
+colormap1 = np.array(['black', 'red', 'lime'])
 # 为花瓣创建一个子图
 plt.subplot(1, 2, 1)
 plt.scatter(x.Petal_Length, x.Petal_Width, c=colormap[y.Targets], s=40)
@@ -39,5 +39,7 @@ plt.title('Real Classification')
 plt.subplot(1, 2, 2)
 plt.scatter(x.Petal_Length, x.Petal_Width, c=colormap[model.labels_], s=40)
 plt.title('K Mean Classification')
+
+
 
 plt.show()
