@@ -5,15 +5,8 @@ import sklearn.metrics as sm
 import pandas as pd
 import numpy as np
 
-
+#导入鸢尾花数据集，存储数据并重命名
 iris = datasets.load_iris()
-print(iris.data)
-print(iris.feature_names)
-print(iris.target)
-print(iris.target_names)
-
-
-#将数据存储到Pandas库中的DataFrame容器 二维，Series容器，最常用
 x = pd.DataFrame(iris.data)
 x.columns = ['Sepal_Length', 'Sepal_Width', 'Petal_Length', 'Petal_Width']
 y = pd.DataFrame(iris.target)
@@ -28,18 +21,23 @@ model.fit(x)
 plt.figure(figsize=(14,7))
 
 # 创建一个颜色集合
-colormap = np.array(['red', 'lime', 'black'])
-colormap1 = np.array(['black', 'red', 'lime'])
+colormap1 = np.array(['pink', 'pink', 'pink'])
+colormap2 = np.array(['red', 'pink', 'gainsboro'])
+
+
+
 # 为花瓣创建一个子图
 plt.subplot(1, 2, 1)
-plt.scatter(x.Petal_Length, x.Petal_Width, c=colormap[y.Targets], s=40)
+plt.scatter(x.Petal_Length, x.Petal_Width, c=colormap1[y.Targets], s=40)
+plt.xlabel(u'Petal_Length')
+plt.ylabel(u'Petal_Width')
 plt.title('Real Classification')
 
 # 绘制模型分类
 plt.subplot(1, 2, 2)
-plt.scatter(x.Petal_Length, x.Petal_Width, c=colormap[model.labels_], s=40)
+plt.scatter(x.Petal_Length, x.Petal_Width, c=colormap2[model.labels_], s=40)
+plt.xlabel(u'Petal_Length')
+plt.ylabel(u'Petal_Width')
 plt.title('K Mean Classification')
-
-
 
 plt.show()

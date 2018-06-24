@@ -26,7 +26,7 @@ y.columns = ['Targets']
 # 设置画板的长宽
 plt.figure(figsize=(14,7))
 # 创建一个颜色集合
-colormap = np.array(['red', 'lime', 'black'])
+colormap = np.array(['red', 'pink', 'gainsboro'])
 
 # 为花萼创建一个子图
 #subplot(numRows, numCols, plotNum)
